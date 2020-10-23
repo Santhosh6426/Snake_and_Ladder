@@ -30,6 +30,9 @@ namespace Snake_and_Ladder
         {
             Console.WriteLine("Welcome to Snake and Ladder Simulator.");
             Console.WriteLine("Player Token position is : "+tokenPosition);
+            ///Generating Random number from 1 to 6 for die function.
+            Random random = new Random();
+            Console.WriteLine("The number on the die is : "+random.Next(1,7));
         }
     }
 }
