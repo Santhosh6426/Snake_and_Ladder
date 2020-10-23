@@ -29,32 +29,28 @@ namespace Snake_and_Ladder
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder Simulator.");
-            ///To miss one turn in case of No play option.
-            int noPlay = 0;
+            Console.WriteLine("Player Token position is : " + tokenPosition);
             ///Condition to stop the game when reached 100.
-            while (tokenPosition <= 100)
-            {
-                Console.WriteLine("Player Token position is : " + tokenPosition);
+            while (tokenPosition < 100)
+            {                
                 ///Generating Random number from 1 to 6 for die function.
                 Random random = new Random();
                 int numberOnDice = random.Next(1, 7);
                 Console.WriteLine("The number on the die is : " + numberOnDice);
-                /// if no play in the previous turn skips one turn.
-                if (noPlay == 1) {
-                    noPlay = 0;
-                    continue;
-                }
                 /// random number to check the options like noplay, ladder and snake.
                 int optionsCheck = random.Next(1, 4);
                 switch (optionsCheck)
                 {
                     case 1:
                         Console.WriteLine("No Play!");
-                        ///if no play then skips one turn.
-                        noPlay = 1;
                         break;
                     case 2:
                         Console.WriteLine("Ladder!");
+                        ///to set exact win position to 100.
+                        if ((tokenPosition+numberOnDice)>100)
+                        {
+                            break;
+                        }
                         ///if ladder then the the player moves the number of times the die generates.
                         tokenPosition += numberOnDice;
                         break;
@@ -69,6 +65,7 @@ namespace Snake_and_Ladder
                         }
                         break;
                 }
+                Console.WriteLine("Player Token position is : " + tokenPosition);
             }
         }
     }
