@@ -22,9 +22,14 @@ namespace Snake_and_Ladder
 {
     class Program
     {
+        /// <summary>
+        /// The token position
+        /// </summary>
+        public static int tokenPosition = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder Simulator.");
+            Console.WriteLine("Player Token position is : "+tokenPosition);
         }
     }
 }
