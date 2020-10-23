@@ -4,8 +4,8 @@
 */
 
 /******************************************************************************
- *  Compilation:  csc.exe /t:exe /out:PrimeChecker.exe PrimeChecker.cs
- *  Execution:    PrimeChecker.exe 103
+ *  Compilation:  C:\Users\Santhu\source\repos\Snake_and_Ladder\bin\Debug\netcoreapp3.1\Snake_and_Ladder.exe
+ *  Execution:    Snake_and_Ladder.exe
  *  
  *  Purpose: Snake and Ladder Game Simulator.
  *
