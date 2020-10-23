@@ -29,7 +29,9 @@ namespace Snake_and_Ladder
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder Simulator.");
-            Console.WriteLine("Player Token position is : " + tokenPosition);
+            Console.WriteLine("Players Token position is : " + tokenPosition);
+            ///To know number of times dice rolled.
+            int noOfTimesDiceRolled = 0;
             ///Condition to stop the game when reached 100.
             while (tokenPosition < 100)
             {                
@@ -66,7 +68,9 @@ namespace Snake_and_Ladder
                         break;
                 }
                 Console.WriteLine("Player Token position is : " + tokenPosition);
+                noOfTimesDiceRolled++;
             }
+            Console.WriteLine("Number of Times Dice Rolled : "+noOfTimesDiceRolled);
         }
     }
 }
